@@ -78,30 +78,33 @@
     width: 100%;
     margin: 0;
   }
-  
   .gallery-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* container se bahar na jaye */
+}
+
+.image-strip {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0;           /* koi gap nahi */
+  margin: 0;
+  padding: 0;
+}
+
+.image-strip img {
+  flex: 0 0 auto;    /* natural size maintain kare */
+  width: 100vw;      /* viewport ke width ke barabar */
+  max-width: 100%;   
+  height: 200px;
+  object-fit: cover; /* distort na ho */
+  margin: 0;
+  border-radius: 0; 
+}
+
+
   
-    position: relative;
-    width: 95%;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-  
-  .image-strip {
-    
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 10px;
-  }
-  
-  .image-strip img {
-    width: 100%;
-  
-    height: 200px;
-    border-radius: 10px;
-    flex-shrink: 0;
-  }
   
   .scroll-buttons {
     margin: 10px;
@@ -113,6 +116,17 @@
     </style>
 </head>
 <body>
+
+
+    <div class="gallery-container">
+            <div class="image-strip" id="imageStrip">
+              <img src="../resource/yesscroll4.webp" alt="3" />
+              <img src="../resource/yesscroll2.webp" alt="2" />
+              <img src="../resource/yesscroll5.webp" alt="1" />
+            </div>
+            </div>
+
+
     <div class="form-container">
         <!-- <header class="header">
             <h1>IndusInd</h1>
@@ -120,13 +134,7 @@
 
 
 
-          <div class="gallery-container">
-            <div class="image-strip" id="imageStrip">
-              <img src="../resource/yesscroll4.webp" alt="3" />
-              <img src="../resource/yesscroll2.webp" alt="2" />
-              <img src="../resource/yesscroll5.webp" alt="1" />
-            </div>
-            </div>
+          
 
 
 
